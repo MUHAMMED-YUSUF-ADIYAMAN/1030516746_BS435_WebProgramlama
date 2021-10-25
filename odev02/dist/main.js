@@ -1,0 +1,1 @@
+(()=>{"use strict";Math.floor(3*Math.random())})();
