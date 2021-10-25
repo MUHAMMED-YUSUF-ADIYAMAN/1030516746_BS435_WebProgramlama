@@ -7,7 +7,7 @@ module.exports = {
         filename: "bundle.js",
         path: path.resolve(__dirname,'public'),
         libraryTarget: "var",
-        library: "Game"
+        library: "game"
     },
     devServer: {
         contentBase: './public',
