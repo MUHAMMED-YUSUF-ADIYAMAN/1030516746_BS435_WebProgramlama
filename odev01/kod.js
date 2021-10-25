@@ -9,14 +9,13 @@ let randomNumber=Math.floor(Math.random() * 3);
                     document.getElementById("kazandiId").style="display: block ;";
                 }
                 else 
-                document.getElementById("img"+x).src = "https://imgrosetta.mynet.com.tr/file/9897198/640xauto.jpg";
+                    document.getElementById("img"+x).src = "https://imgrosetta.mynet.com.tr/file/9897198/640xauto.jpg";
             else if(step==0)
                 {
                     document.getElementById("alanId").style="display: none;";
                     document.getElementById("yenildiId").style="display: block ;";
                 }
             else if(step<0)
-            document.location.reload(true);
+                document.location.reload(true);
             step--;
         }
-        
