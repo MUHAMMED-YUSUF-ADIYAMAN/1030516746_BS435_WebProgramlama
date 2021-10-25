@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kediyi Bul</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="bundle.js"></script>
+   
+</head>
+<body>
+    <h2>Kedi Bulmaca</h2>
+    <p>Bu oyunda 3 kapalı kart içindeki kediyi bulman gerekmektedir. 2 hakkın var dikkat et </p>
+    <img id="img0" class="kart"  src="https://imagesbyheatherm.files.wordpress.com/2009/08/lattice-card1.png?w=584" onclick="Game.selected(0)">
+    <img id="img1" class="kart"  src="https://imagesbyheatherm.files.wordpress.com/2009/08/lattice-card1.png?w=584" onclick="Game.selected(1)">
+    <img id="img2" class="kart"  src="https://imagesbyheatherm.files.wordpress.com/2009/08/lattice-card1.png?w=584" onclick="Game.selected(2)">
+
+    <div class="mesaj">
+        <p id="alanId">Kedi kartını bulmak için kartın üzerine tıklamalısın</p>
+        <p id="kazandiId" style="display: none;">Tebrikler kazandınız. Bir daha oynamak isterseniz <span class="link" onclick="document.location.reload(true)">buraya</span> tıklayınız</p>
+        <p id="yenildiId" style="display: none;">Üzülme bir daha onanamak için <span class="link" onclick="document.location.reload(true)">buraya</span> tıklayınız</p>
+    </div>
+</body>
+</html>
