@@ -7,11 +7,15 @@ module.exports = {
         filename: "bundle.js",
         path: path.resolve(__dirname,'public'),
         libraryTarget: "var",
-        library: "game"
+        library: "Quiz"
     },
     devServer: {
-        contentBase: './public',
-        injectClient:false
+        static: {
+            directory: path.join(__dirname, 'public'),
+        },
+        compress: true,
+
+
     },
     optimization: {
         minimize: true,

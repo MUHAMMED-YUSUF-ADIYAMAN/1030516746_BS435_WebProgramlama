@@ -7,39 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kediyi Bul</title>
     <link rel="stylesheet" href="style.css">
-    <script src="bundle.js"></script>
-    <script>
-        let randomNumber=Math.floor(Math.random() * 3);
-        let step=2;
-        selected=(x)=>{
-            if(step==2 || step==1)
-                if(randomNumber==x)
-                {
-                    document.getElementById("img"+x).src = "https://i4.hurimg.com/i/hurriyet/75/750x0/5efd782445d2a04ed8f62cba.jpg";
-                    document.getElementById("alanId").style="display: none;";
-                    document.getElementById("kazandiId").style="display: block ;";
-                }
-                else
-                    document.getElementById("img"+x).src = "https://imgrosetta.mynet.com.tr/file/9897198/640xauto.jpg";
-            else if(step==0)
-            {
-                document.getElementById("alanId").style="display: none;";
-                document.getElementById("yenildiId").style="display: block ;";
-            }
-            else if(step<0)
-                document.location.reload(true);
-            step--;
-        }
-    </script>
+
+
 
 </head>
 <body>
 <div class="container">
     <h2>Kedi Bulmaca</h2>
     <p>Bu oyunda 3 kapalı kart içindeki kediyi bulman gerekmektedir. 2 hakkın var dikkat et </p>
-    <img id="img0" class="kart"  src="https://imagesbyheatherm.files.wordpress.com/2009/08/lattice-card1.png?w=584" onclick="selected(0)">
-    <img id="img1" class="kart"  src="https://imagesbyheatherm.files.wordpress.com/2009/08/lattice-card1.png?w=584" onclick="selected(1)">
-    <img id="img2" class="kart"  src="https://imagesbyheatherm.files.wordpress.com/2009/08/lattice-card1.png?w=584" onclick="selected(2)">
+    <img id="img0" class="kart"  src="https://imagesbyheatherm.files.wordpress.com/2009/08/lattice-card1.png?w=584" onclick="Quiz.selected(0)">
+    <img id="img1" class="kart"  src="https://imagesbyheatherm.files.wordpress.com/2009/08/lattice-card1.png?w=584" onclick="Quiz.selected(1)">
+    <img id="img2" class="kart"  src="https://imagesbyheatherm.files.wordpress.com/2009/08/lattice-card1.png?w=584" onclick="Quiz.selected(2)">
 
     <div class="mesaj">
         <p id="alanId">Kedi kartını bulmak için kartın üzerine tıklamalısın</p>
@@ -47,6 +25,6 @@
         <p id="yenildiId" style="display: none;">Üzülme bir daha onanamak için <span class="link" onclick="document.location.reload(true)">buraya</span> tıklayınız</p>
     </div>
 </div>
-
+<script src="bundle.js"></script>
 </body>
 </html>

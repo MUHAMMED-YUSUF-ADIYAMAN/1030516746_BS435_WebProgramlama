@@ -1,6 +1,7 @@
+
 let randomNumber=Math.floor(Math.random() * 3);
 let step=2;
-export const selected=(x)=>{
+  export const selected=(x)=>{
     if(step==2 || step==1)
         if(randomNumber==x)
         {
