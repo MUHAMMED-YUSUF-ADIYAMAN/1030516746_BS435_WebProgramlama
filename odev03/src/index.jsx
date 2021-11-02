@@ -52,22 +52,23 @@ let step=2;
         if(randomNumber==x)
         {
             document.getElementById("img"+x).src = "https://i4.hurimg.com/i/hurriyet/75/750x0/5efd782445d2a04ed8f62cba.jpg";
+            window.alert("Tebrikler ");
             this.setState({message: "Tebrikler kazandın"},()=>{})
-
             this.setState((state) => {
                 return {message: "Tebrikler kazandın"};
             });
+
         }
         else
             document.getElementById("img"+x).src = "https://imgrosetta.mynet.com.tr/file/9897198/640xauto.jpg";
     else if(step==0)
     {
-        alet("üzülme")
+
         this.setState({message: "Bir dahaki Sefere"},()=>{})
         this.setState((state) => {
              {message: "Bir dahaki Sefere"};
         });
-
+        window.alert("üzülme birdaha dene ");
     }
     else if(step<0)
         document.location.reload(true);
