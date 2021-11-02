@@ -20,5 +20,4 @@ var selected = function selected(x) {
   } else if (step < 0) document.location.reload(true);
   step--;
 };
-
 exports.selected = selected;
