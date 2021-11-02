@@ -8,7 +8,6 @@ let step=2;
             document.getElementById("img"+x).src = "https://i4.hurimg.com/i/hurriyet/75/750x0/5efd782445d2a04ed8f62cba.jpg";
             document.getElementById("alanId").style="display: none;";
             document.getElementById("kazandiId").style="display: block ;";
-            console.log("mya");
         }
         else
             document.getElementById("img"+x).src = "https://imgrosetta.mynet.com.tr/file/9897198/640xauto.jpg";
