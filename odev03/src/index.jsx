@@ -41,8 +41,6 @@ class App extends  React.Component{
         )}
 
     };
-
-
 }
 
 let randomNumber=Math.floor(Math.random() * 3);
