@@ -1,79 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import {Game} from "./Game";
 
 
-class App extends  React.Component{
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            message: "",
-        }
-
-    }
-    render() {
-
-        return(
-            <>
-                <img id="img0" className="kart" src="lib/default.png" onClick={()=>selected(0)}/>
-                <img id="img1" className="kart" src="lib/default.png" onClick={()=>selected(1)}/>
-                <img id="img2" className="kart" src="lib/default.png" onClick={()=>selected(2)}/>
-                <div className="mesaj">
-                    <p id="alanId">Kedi kartını bulmak için kartın üzerine tıklamalısın</p>
-                    <p>{this.sonuc()}</p>
-                </div>
-            </>
-
-
-
-
-    )}
-
-    handleRefresh = () => {
-        document.location.reload(true);
-        window.location.reload();
-        // by calling this method react re-renders the component
-        this.setState({});
-    };
-    sonuc=()=>{
-
-        {return(<>{this.state.message}  Bir daha oynamak için <span className="link"onClick={this.handleRefresh} >buraya</span> tıklayınız</>
-
-        )}
-
-    };
-
-}
-
-
-
-let randomNumber=Math.floor(Math.random() * 3);
-let step=2;
-   function selected(x){
-    if(step==2 || step==1)
-        if(randomNumber==x)
-        {
-            document.getElementById("img"+x).src = "lib/kedi.webp";
-            window.alert("Tebrikler ");
-            this.setState({message: "Tebrikler kazandın"},()=>{})
-            this.setState((state) => {
-                return {message: "Tebrikler kazandın"};
-            });
-
-        }
-        else
-            document.getElementById("img"+x).src = "lib/kopek.webp";
-    else if(step==0)
-    {
-
-        this.setState({message: "Bir dahaki Sefere"},()=>{})
-        this.setState((state) => {
-             {message: "Bir dahaki Sefere"};
-        });
-        window.alert("üzülme birdaha dene ");
-    }
-    else if(step<0)
-        document.location.reload(true);
-    step--;
+export const App = () => {
+    return(
+        <Game/>
+    )
 }
 ReactDOM.render(<App/>, document.getElementById("root"));
