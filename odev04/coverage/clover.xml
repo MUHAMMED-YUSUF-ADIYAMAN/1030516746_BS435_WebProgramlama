@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1636419643701" clover="3.2.0">
+  <project timestamp="1636419643701" name="All files">
+    <metrics statements="25" coveredstatements="22" conditionals="12" coveredconditionals="12" methods="8" coveredmethods="7" elements="45" coveredelements="41" complexity="0" loc="25" ncloc="25" packages="1" files="2" classes="2"/>
+    <file name="Game.jsx" path="C:\Users\myusu\OneDrive\Documents\4 güz\web programlama\ODEV\1030516746_BS435_WebProgramlama\odev04\src\Game.jsx">
+      <metrics statements="22" coveredstatements="22" conditionals="12" coveredconditionals="12" methods="7" coveredmethods="7"/>
+      <line num="5" count="25" type="stmt"/>
+      <line num="6" count="25" type="stmt"/>
+      <line num="16" count="25" type="stmt"/>
+      <line num="17" count="26" type="stmt"/>
+      <line num="19" count="26" type="cond" truecount="2" falsecount="0"/>
+      <line num="20" count="25" type="stmt"/>
+      <line num="23" count="25" type="cond" truecount="2" falsecount="0"/>
+      <line num="24" count="7" type="stmt"/>
+      <line num="25" count="7" type="stmt"/>
+      <line num="27" count="18" type="stmt"/>
+      <line num="28" count="18" type="cond" truecount="2" falsecount="0"/>
+      <line num="29" count="2" type="stmt"/>
+      <line num="32" count="25" type="stmt"/>
+      <line num="38" count="25" type="cond" truecount="2" falsecount="0"/>
+      <line num="39" count="9" type="stmt"/>
+      <line num="47" count="25" type="stmt"/>
+      <line num="48" count="1" type="stmt"/>
+      <line num="58" count="51" type="stmt"/>
+      <line num="59" count="51" type="stmt"/>
+      <line num="63" count="18" type="stmt"/>
+      <line num="64" count="4" type="stmt"/>
+      <line num="65" count="4" type="stmt"/>
+    </file>
+    <file name="index.jsx" path="C:\Users\myusu\OneDrive\Documents\4 güz\web programlama\ODEV\1030516746_BS435_WebProgramlama\odev04\src\index.jsx">
+      <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <line num="6" count="0" type="stmt"/>
+      <line num="7" count="0" type="stmt"/>
+      <line num="11" count="0" type="stmt"/>
+    </file>
+  </project>
+</coverage>
