@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { HashRouter } from "react-router-dom";
 import {Route, Switch} from "react-router";
+
 import {Game} from "./game";
 import {Home} from "./home";
 import HeaderBar from "./headerbar";
