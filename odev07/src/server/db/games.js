@@ -7,19 +7,18 @@ let counter = 0;
 
 function createGame(userId) {
 
-    img =['img/kopek.webp','img/kopek.webp','img/kopek.webp'];
+    var defimg = ['img/default.png','img/default.png','img/default.png'];
+    var imgs=['img/kopek.webp','img/kopek.webp','img/kopek.webp']
     kediIndex = Math.floor(Math.random()*3);
-    img[kediIndex]='img/kedi.webp';
+    imgs[kediIndex]='img/kedi.webp';
 
     const game = {
         kediIndex,
+        hak: 2,
+        defimg,
+        imgs,
         victory: false,
-        defeat: false,
-        img:img,
-        kart: ["img/default.png","img/default.png","img/default.png"],
-        kartSayac: 0,
-        hak:2,
-        oyunSonlandi: false
+        defeat: false
     };
 
     games.set(userId, game);
@@ -27,6 +26,17 @@ function createGame(userId) {
     return game;
 }
 
+function  shuffle() {
+    const imgs=['img/kedi.webp','img/kopek.webp','img/kopek.webp'];
+    var j, x, i;
+    for (i = imgs.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = imgs[i];
+        imgs[i] = imgs[j];
+        imgs[j] = x;
+    }
+    return imgs
+}
 
 function getGame(userId) {
     return games.get(userId);

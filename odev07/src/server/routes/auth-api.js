@@ -39,10 +39,6 @@ router.post('/logout', function (req, res) {
 });
 
 
-/*
-    Just return the id of the user, if the request is
-    authenticated with a valid session cookie
- */
 router.get('/user', function (req, res) {
 
     if (!req.user) {

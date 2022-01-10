@@ -7,22 +7,16 @@ const session = require("express-session");
 const LocalStrategy = require('passport-local').Strategy;
 const Users = require('./db/users');
 const WsHandler = require('./ws-handler');
-
 const app = express();
-
-const matchApi = require('./routes/game-api');
+const gameApi = require('./routes/game-api');
 const authApi = require('./routes/auth-api');
 
 app.use(express.static('public'));
-
-//JSON için
 app.use(bodyParser.json());
-
 WsHandler.init(app);
 
-//passport, session vs.
 app.use(session({
-    secret: 'cookie sifrelenirken kullanialcak secret key',
+    secret: 'secret key',
     resave: false,
     saveUninitialized: false
 }));
@@ -66,7 +60,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Route
-app.use('/api',matchApi);
+app.use('/api',gameApi);
 app.use('/api',authApi);
 
 

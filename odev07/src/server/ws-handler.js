@@ -24,7 +24,6 @@ function broadCastCount() {
     ews.getWss().clients.forEach((client) => {
 
         const data = JSON.stringify({userCount: n});
-        console.log(userCount);
 
         client.send(data);
     });

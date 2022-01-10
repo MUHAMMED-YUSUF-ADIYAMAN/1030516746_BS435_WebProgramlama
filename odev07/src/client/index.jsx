@@ -1,14 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-import {Game} from "./Game";
-import {Home} from "./home";
-import {HashRouter, Link} from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import {Route, Switch} from "react-router";
-
+import {Game} from "./game";
+import {Home} from "./home";
 import HeaderBar from "./headerbar";
 import Login from "./login";
 import SignUp from "./signup";
+
 
 class App extends React.Component {
     constructor(props) {
@@ -40,6 +39,7 @@ class App extends React.Component {
         }
 
         if (response.status !== 200) {
+            //TODO sayfada çeşitli uyarılar gösterilebilir.
         } else {
             const payload = await response.json();
             this.updateLoggedInUser(payload);
@@ -65,7 +65,7 @@ class App extends React.Component {
                 this.setState({ userCount: "ERROR" });
                 return;
             }
-            console.log(dto.userCount);
+
             this.setState({ userCount: dto.userCount });
         };
     }
@@ -116,3 +116,4 @@ class App extends React.Component {
 
 }
 ReactDOM.render(<App />, document.getElementById("root"));
+

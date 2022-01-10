@@ -2,9 +2,9 @@ const app = require('./app');
 
 const server = require('http').Server(app);
 
-
 const port = process.env.PORT || 300;
 
 app.listen(port, () => {
     console.log('Started server on port ' + port);
 });
+

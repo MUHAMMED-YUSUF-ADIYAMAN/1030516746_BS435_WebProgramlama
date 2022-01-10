@@ -1,6 +1,6 @@
 const React = require('react');
 const { mount } = require('enzyme');
-const {Game}  = require('../src/client/Game');
+const {Game}  = require('../src/client/game');
 const {Home} = require("../src/client/home");
 
 test("test oluşturuldu",()=>{

@@ -7,10 +7,10 @@ function getPayload(game){
 
     const payload = {
         kediIndex:game.kediIndex,
-        images: game.images,
+        imgs: game.imgs,
         victory: game.victory,
         defeat: game.defeat,
-        kart:game.kart,
+        defimg:game.defimg,
         hak: game.hak
     };
 
@@ -50,7 +50,7 @@ router.get('/games/ongoing', (req, res) => {
 });
 
 router.post('/games/ongoing', (req, res) => {
-console.log("game api içinde");
+
     if (!req.user) {
         res.status(401).send();
         return;
@@ -64,8 +64,7 @@ console.log("game api içinde");
     }
 
     const dto = req.body;
-    console.log(dto.answerIndex +"-"+ dto.index);
-    game.kart[dto.index]=dto.answerIndex;
+    game.defimg[dto.index]=dto.answerIndex;
 
     if(dto.index !== game.kediIndex){
         game.hak--;

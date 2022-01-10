@@ -51,6 +51,4 @@ function reportEndOfMatch(userId, isVictory){
         user.defeats++;
     }
 }
-
-
 module.exports = {getUser, verifyUser, createUser, resetAllUsers, reportEndOfMatch};
